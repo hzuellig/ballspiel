@@ -131,7 +131,8 @@ function move_3() {
 
 //sophit
 function move_4() {
-
+    background(155);
+   
 }
 
 // moritz
