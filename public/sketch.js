@@ -104,11 +104,21 @@ function move_2() {
 }
 
 function move_3() {
-
+    // Nicole
 
 }
 
 function move_4() {
+    //Sophit
 
+}
+// moritz
+function move_5() {
+
+
+}
+
+function move_6() {
+    //Alain
 
 }
