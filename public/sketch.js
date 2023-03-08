@@ -11,6 +11,14 @@ var moves = 7; //anzahl unterschiedliche bewegungen
 //d Lina heds ned gseh
 //Lina can you see me?
 
+
+// SOPHIT VOREINSTELLUNG//
+let sox = 0; // Starting x position of the ball
+let soy = 50; // Starting y position of the ball
+let soySpeed = 5; // Speed of the ball in the y direction
+let soisBouncing = true; // Whether the ball is bouncing or not
+let sogroesse = 10; // Starting size of the ball
+
 var settings = {
     start: false,
     finished: false,
@@ -131,7 +139,41 @@ function move_3() {
 
 //sophit
 function move_4() {
-    background(155);
+    randomSeed(5);
+     // Draw intersecting rectangles in bold colors
+  noStroke(); // Disable stroke
+  fill('#D22D39'); // Set fill color to red
+  rect(0, 0, width/2, height/2);
+  fill('#42936C'); // Set fill color to green
+  rect(width/2, 0, width/2, height/2);
+  fill('#2363EB'); // Set fill color to blue
+  rect(0, height/2, width/2, height/2);
+  fill('#EBC141'); // Set fill color to yellow
+  rect(width/2, height/2, width/2, height/2);
+  
+  // Draw diagonal lines in a bold color
+  strokeWeight(15); // Set stroke weight to 3 pixels
+  stroke(255); // Set stroke color to white
+  line(0, 0, width/2, height/2); // Draw top-left to bottom-right line
+  line(width/2, height/2, width, height); // Draw bottom-right to top left line
+
+  // Draw the ball
+  fill('#E7909F');
+  noStroke();
+  ellipse(sox, soy, sogroesse, sogroesse);
+
+  // Move the ball
+  sox += 5;
+  soy += soySpeed;
+
+  // Increase the size of the ball
+  sogroesse += 1;
+
+  // Bounce the ball when it hits the floor
+  if (soySpeed > height - sogroesse/2 && soisBouncing) {
+    soySpeed = -soySpeed;
+    soisBouncing = false;
+  }
    
 }
 
@@ -143,7 +185,7 @@ function move_5() {
 //alain
 function move_6() {
     background(0);
-    fill(green);
+    fill(gruen);
     noStroke();
     arc(width / 2, height / 2, width, height, 0, PI);
 
