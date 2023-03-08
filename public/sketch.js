@@ -1,11 +1,7 @@
 var socket;
 
 var moves = 4; //anzahl unterschiedliche bewegungen 
-//Hello my name is YodoxD, nice to meet you! <3
-//ok cool
-// bananita
-// nice
-// sind ihr au so lost? 0.0
+
 
 var settings = {
     start: false,
@@ -16,7 +12,6 @@ var settings = {
     radius: 50,
     stepx: 10,
     stepy: 5
-        // Nicole war hier xD #2
 }
 
 function setup() {
