@@ -26,7 +26,7 @@ var mara_moved=false;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight)
-    socket = io.connect("http://localhost:3030/");
+    socket = io.connect("http://localhost:3000/");
     socket.emit("settings", settings);
     socket.on("canIstart", startDrawing);
     socket.on("settings", setSettings);
