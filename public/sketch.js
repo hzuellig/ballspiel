@@ -238,12 +238,7 @@ function move_5() {
 
 //alain
 function move_6() {
-    background(0);
-    fill(gruen);
-    noStroke();
-    arc(width / 2, height / 2, width, height, 0, PI);
-
-    fill(255, 0, 0);
+    //test
 
 
 }
