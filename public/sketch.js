@@ -5,6 +5,13 @@ var gelb;
 var rosa;
 var gruen;
 
+let alainX = 0;
+let alainY = 300;
+let alainXSpeed = 10;
+let alainYSpeed = 10;
+let alainFarbe = blau;
+let alainCounter = 0; 
+
 var moves = 7; //anzahl unterschiedliche bewegungen 
 // es geht wieder los
 //Lina wenn das gsehsch...denn funktioniert :D
@@ -238,9 +245,30 @@ function move_5() {
 
 //alain
 function move_6() {
-    //hallo ich bin genervt
+    background(0);
 
-
+    // Draw the triangle at the current position
+    fill(alainFarbe);
+    noStroke();
+    triangle(alainX, alainY, alainX+50, alainY, alainX, alainY+50);
+  
+    // Move the triangle diagonally
+    alainX += alainXSpeed;
+    alainY += alainYSpeed;
+  
+    // Bounce the triangle off the edges of the canvas
+    if (alainCounter <= 5) {
+      if (alainX < 0 || alainX > width - 50) {
+        alainFarbe = gelb;
+        alainXSpeed = -alainXSpeed;
+        alainCounter++;
+      }
+      if (y < 0 || alainY > height - 50) {
+        alainFarbe = gruen;
+        alainYSpeed = -alainYSpeed;
+        alainCounter++;
+      }
+    }
 }
 
 //lina
