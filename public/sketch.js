@@ -112,13 +112,18 @@ function move_4() {
     //Sophit
 
 }
-// moritz
-function move_5() {
 
+function move_5() {
+    // moritz
 
 }
 
 function move_6() {
     //Alain
+
+}
+
+function move_7() {
+    //Lina
 
 }
