@@ -2,18 +2,18 @@ var socket;
 
 var moves = 4; //anzahl unterschiedliche bewegungen 
 //Hello my name is YodoxD, nice to meet you! <3
+//ok cool
 
 
 var settings = {
     start: false,
     finished: false,
-    queue: 0,
-    ballx: -500,
-    bally: window.innerHeight / 2,
-    radius: 50,
-    stepx: 10,
-    stepy: 5,
-    //Nicole war hier xD
+    queue:0,
+    ballx:-100,
+    bally:window.innerHeight/2,
+    radius:50,
+    stepx:10,
+    stepy:5
 }
 
 function setup() {
