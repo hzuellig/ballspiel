@@ -98,32 +98,34 @@ function move_1() {
     settings.ballx += settings.stepx;
 }
 
+//mara
 function move_2() {
-// Mara
+
 
 }
 
+//nicole
 function move_3() {
-    // Nicole
 
 }
 
+//sophit
 function move_4() {
-    //Sophit
 
 }
 
+// moritz
 function move_5() {
-    // moritz
 
 }
 
+//alain
 function move_6() {
-    //Alain
+
 
 }
 
+//lina
 function move_7() {
-    //Lina
 
 }
