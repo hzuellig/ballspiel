@@ -31,10 +31,10 @@ function setup() {
 
     background(0);
     blau = color('#2363EB');
-    rot = color(#D22D39);
-    gelb = color(#EBC141);
-    rosa = (#E7909F);
-    gruen = color(#42936C);
+    rot = color('#D22D39');
+    gelb = color('#EBC141');
+    rosa = color('#E7909F');
+    gruen = color('#42936C');
 
     settings.bally = random(window.innerHeight);
 }
@@ -82,7 +82,7 @@ function makeMove() {
     //console.log("move "+move)
     switch (move) {
         case (0):
-            move_1();
+            move_6();
             break;
         case (1):
             move_2()
@@ -142,7 +142,15 @@ function move_5() {
 
 //alain
 function move_6() {
+    background(black);
+    fill(green);
+    noStroke();
+    arc(width / 2, height / 2, width, height, 0, PI);
 
+    fill(255, 0, 0);
+
+    ellipse(settings.ballx, settings.bally, settings.radius);
+    settings.ballx += settings.stepx;
 
 }
 
