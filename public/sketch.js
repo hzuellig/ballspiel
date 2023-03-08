@@ -26,17 +26,17 @@ var mara_moved=false;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight)
-    socket = io.connect("http://localhost:3000/");
+    socket = io.connect("http://localhost:3030/");
     socket.emit("settings", settings);
     socket.on("canIstart", startDrawing);
     socket.on("settings", setSettings);
 
     background(0);
-    blau = color(#2363EB);
-    rot = color(#D22D39);
-    gelb = color(#EBC141);
-    rosa = (#E7909F);
-    gruen = color(#42936C);
+    blau = color('#2363EB');
+    rot = color('#D22D39');
+    gelb = color('#EBC141');
+    rosa = ('#E7909F');
+    gruen = color('#42936C');
 
     settings.bally = random(window.innerHeight);
 }
@@ -74,7 +74,7 @@ function startDrawing(data) {
 function setSettings(data) {
     settings.socketid = data.socketid;
     settings.queue = data.queue;
-    //console.log(settings.queue);
+    console.log(settings.queue);
     //setting=data;
 }
 
@@ -122,7 +122,7 @@ function move_1() {
 
 //mara
 function move_2() {
-    background(0);
+    background(0,20);
     fill(gruen);
     noStroke();
     arc(width / 2, height / 2, width, height, radians(-70),     radians(180));
