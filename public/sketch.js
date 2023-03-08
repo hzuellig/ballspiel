@@ -2,6 +2,7 @@ var socket;
 
 var moves = 4; //anzahl unterschiedliche bewegungen 
 
+//Lina wenn das gsehsch...denn funktioniert :D
 
 var settings = {
     start: false,
