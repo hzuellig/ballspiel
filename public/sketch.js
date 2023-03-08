@@ -128,6 +128,8 @@ function move_1() {
     settings.ballx += settings.stepx;
 }
 
+
+
 //mara
 function move_2() {
     background(0,20);
