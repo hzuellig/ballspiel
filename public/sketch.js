@@ -10,7 +10,9 @@ let alainY = 300;
 let alainXSpeed = 10;
 let alainYSpeed = 10;
 let alainFarbe = blau;
-let alainCounter = 0; 
+let alainCounter = 0;
+let alainFarben = ['blau', 'rot', 'gelb', 'rosa', 'gruen'];
+
 
 var moves = 7; //anzahl unterschiedliche bewegungen 
 // es geht wieder los
@@ -259,12 +261,12 @@ function move_6() {
     // Bounce the triangle off the edges of the canvas
     if (alainCounter <= 5) {
       if (alainX < 0 || alainX > width - 50) {
-        alainFarbe = gelb;
+        alainFarbe = random(alainFarben);
         alainXSpeed = -alainXSpeed;
         alainCounter++;
       }
       if (y < 0 || alainY > height - 50) {
-        alainFarbe = gruen;
+        alainFarbe = random(alainFarben);
         alainYSpeed = -alainYSpeed;
         alainCounter++;
       }
