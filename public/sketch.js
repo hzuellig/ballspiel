@@ -1,6 +1,7 @@
 var socket;
 
 var moves = 4; //anzahl unterschiedliche bewegungen 
+// ein test von Hanna
 
 var settings = {
     start: false,
