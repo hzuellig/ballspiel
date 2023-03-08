@@ -5,52 +5,53 @@ var moves = 4; //anzahl unterschiedliche bewegungen
 var settings = {
     start: false,
     finished: false,
-    queue:0,
-    ballx:-100,
-    bally:window.innerHeight/2,
-    radius:50,
-    stepx:10,
-    stepy:5
+    queue: 0,
+    ballx: -500,
+    bally: window.innerHeight / 2,
+    radius: 50,
+    stepx: 10,
+    stepy: 5,
+    //Nicole war hier xD
 }
 
-function setup(){
+function setup() {
     createCanvas(window.innerWidth, window.innerHeight)
-    socket=io.connect("http://localhost:3000/");
+    socket = io.connect("http://localhost:3000/");
     socket.emit("settings", settings);
     socket.on("canIstart", startDrawing);
     socket.on("settings", setSettings);
-   
+
     background(0);
 
-    settings.bally= random(window.innerHeight);
+    settings.bally = random(window.innerHeight);
 }
 
-function draw(){
+function draw() {
 
-    if(settings.start==false){
+    if (settings.start == false) {
         socket.emit("canIstart", settings);
     }
-    if(settings.start==true && settings.finished==false){
+    if (settings.start == true && settings.finished == false) {
         //draw
         makeMove();
 
-        if (settings.ballx > width-settings.radius/2) {
-            
+        if (settings.ballx > width - settings.radius / 2) {
+
             settings.ballx = settings.ballx - width; //zurücksetzen um die eigene Breite
 
-            socket.emit("next", settings);//start next ball
-            settings.finished=true;
+            socket.emit("next", settings); //start next ball
+            settings.finished = true;
         }
-        
-        
+
+
     }
 
 }
 
-function startDrawing(data){
+function startDrawing(data) {
     settings.start = data.start;
-    settings.ballx=data.ballx;
-    settings.bally=data.bally;
+    settings.ballx = data.ballx;
+    settings.bally = data.bally;
 
     //console.log("I got "+settings.ballx+" and "+ settings.start)
 }
@@ -63,45 +64,48 @@ function setSettings(data) {
 }
 
 
-function makeMove(){
+function makeMove() {
     let move = settings.queue % moves;
     //console.log("move "+move)
-    switch(move){
-        case(0):
-        move_1();
-        break;
-        case(1):
-        move_1()
-        break;
-        case(2):
-        move_1()
-        break;
-        case(3):
-        move_1()
-        break;
+    switch (move) {
+        case (0):
+            move_1();
+            break;
+        case (1):
+            move_1()
+            break;
+        case (2):
+            move_1()
+            break;
+        case (3):
+            move_1()
+            break;
     }
 }
 
-function move_1(){
-        background(0, 20);
-        fill(255,255,0);
-        noStroke();
-        arc(width/2, height/2, width, height, 0, PI);
+function move_1() {
+    background(0, 20);
+    fill(255, 255, 0);
+    noStroke();
+    arc(width / 2, height / 2, width, height, 0, PI);
 
-        fill(255,0,0);
-    
-        ellipse(settings.ballx, settings.bally, settings.radius);
-        settings.ballx+=settings.stepx;
-}
-function move_2(){
+    fill(255, 0, 0);
 
-    
+    ellipse(settings.ballx, settings.bally, settings.radius);
+    settings.ballx += settings.stepx;
 }
-function move_3(){
-   
+
+function move_2() {
+
 
 }
-function move_4(){
-    
-   
+
+function move_3() {
+
+
+}
+
+function move_4() {
+
+
 }
