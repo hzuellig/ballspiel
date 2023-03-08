@@ -5,7 +5,6 @@ var moves = 4; //anzahl unterschiedliche bewegungen
 //Lina wenn das gsehsch...denn funktioniert :D
 //d Lina heds ned gseh
 //Lina can you see me?
-//No
 
 var settings = {
     start: false,
@@ -76,13 +75,13 @@ function makeMove() {
             move_1();
             break;
         case (1):
-            move_2()
+            move_1()
             break;
         case (2):
-            move_3()
+            move_1()
             break;
         case (3):
-            move_4()
+            move_1()
             break;
     }
 }
@@ -101,21 +100,31 @@ function move_1() {
 }
 
 function move_2() {
-
+// Mara
 
 }
 
 function move_3() {
-
+    // Nicole
 
 }
 
 function move_4() {
+    //Sophit
 
+}
+
+function move_5() {
+    // moritz
 
 }
 
 function move_6() {
     //Alain
+
+}
+
+function move_7() {
+    //Lina
 
 }
