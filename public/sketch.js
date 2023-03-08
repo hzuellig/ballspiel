@@ -76,13 +76,13 @@ function makeMove() {
             move_1();
             break;
         case (1):
-            move_1()
+            move_2()
             break;
         case (2):
-            move_1()
+            move_3()
             break;
         case (3):
-            move_1()
+            move_4()
             break;
     }
 }
@@ -112,5 +112,10 @@ function move_3() {
 function move_4() {
     //Sophit
     
+
+}
+
+function move_6() {
+    //Alain
 
 }
