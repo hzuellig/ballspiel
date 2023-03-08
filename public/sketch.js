@@ -8,7 +8,7 @@ var settings = {
     queue:0,
     ballx:-100,
     bally:window.innerHeight/2,
-    radius:50,
+    radius:35,
     stepx:10,
     stepy:5
 }
