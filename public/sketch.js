@@ -2,6 +2,7 @@ var socket;
 
 var moves = 4; //anzahl unterschiedliche bewegungen 
 //Hello my name is YodoxD, nice to meet you! <3
+//ok cool
 
 
 var settings = {
