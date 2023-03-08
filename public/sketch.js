@@ -20,7 +20,9 @@ var settings = {
     radius: 50,
     stepx: 10,
     stepy: 5
-}
+};
+
+var mara_moved=false;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight)
@@ -30,11 +32,11 @@ function setup() {
     socket.on("settings", setSettings);
 
     background(0);
-    blau = color('#2363EB');
-    rot = color('#D22D39');
-    gelb = color('#EBC141');
-    rosa = color('#E7909F');
-    gruen = color('#42936C');
+    blau = color(#2363EB);
+    rot = color(#D22D39);
+    gelb = color(#EBC141);
+    rosa = (#E7909F);
+    gruen = color(#42936C);
 
     settings.bally = random(window.innerHeight);
 }
@@ -108,11 +110,11 @@ function makeMove() {
 function move_1() {
     //hanna
     background(0, 20);
-    fill(gelb);
+    fill(255, 255, 0);
     noStroke();
     arc(width / 2, height / 2, width, height, 0, PI);
 
-    fill(rot);
+    fill(255, 0, 0);
 
     ellipse(settings.ballx, settings.bally, settings.radius);
     settings.ballx += settings.stepx;
@@ -120,9 +122,28 @@ function move_1() {
 
 //mara
 function move_2() {
+    background(0);
+    fill(gruen);
+    noStroke();
+    arc(width / 2, height / 2, width, height, radians(-70),     radians(180));
+    fill(rosa);
+    settings.stepy = sin(radians(70))*3
+    settings.stepx = cos(radians(70))*3
+  
+    if(mara_moved==false){
+      settings.bally=width / 2 -63
+      mara_moved=true
+    }
+    rect(settings.ballx, settings.bally, settings.radius);
+    if (settings.ballx < width / 2) {
+      settings.ballx += 10;
+    } else {
+      settings.ballx += settings.stepx;
+      settings.bally += settings.stepy*-1;
+    }
+  
+  }
 
-
-}
 
 //nicole
 function move_3() {
@@ -142,15 +163,7 @@ function move_5() {
 
 //alain
 function move_6() {
-    background(0);
-    fill(green);
-    noStroke();
-    arc(width / 2, height / 2, width, height, 0, PI);
 
-    fill(255, 0, 0);
-
-    ellipse(settings.ballx, settings.bally, settings.radius);
-    settings.ballx += settings.stepx;
 
 }
 
