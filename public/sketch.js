@@ -123,12 +123,7 @@ function setup() {
 
             //nicole
             function move_3() {
-                background(0, 20);
-                fill(255, 255, 0);
-                noStroke();
-                arc(width / 2, height / 2, width, height, 0, PI);
 
-                fill(255, 0, 0);
             }
 
             //sophit
