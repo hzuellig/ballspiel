@@ -87,6 +87,7 @@ function makeMove() {
 }
 
 function move_1() {
+    //hanna
     background(0, 20);
     fill(255, 255, 0);
     noStroke();
