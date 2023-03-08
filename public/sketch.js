@@ -31,11 +31,19 @@ function setup() {
     socket.on("canIstart", startDrawing);
     socket.on("settings", setSettings);
 
+<<<<<<< HEAD
     //background(0);
     blau = color('#2363EB');
     rot = color('#D22D39');
     gelb = color('#EBC141');
     rosa = color('#E7909F');
+=======
+    background(0);
+    blau = color('#2363EB');
+    rot = color('#D22D39');
+    gelb = color('#EBC141');
+    rosa = ('#E7909F');
+>>>>>>> b4dafc3cc9e7a4fc492d07b3147945ef06f8518e
     gruen = color('#42936C');
 
     settings.bally = random(window.innerHeight);
@@ -74,7 +82,7 @@ function startDrawing(data) {
 function setSettings(data) {
     settings.socketid = data.socketid;
     settings.queue = data.queue;
-    //console.log(settings.queue);
+    console.log(settings.queue);
     //setting=data;
 }
 
@@ -122,7 +130,7 @@ function move_1() {
 
 //mara
 function move_2() {
-    background(0);
+    background(0,20);
     fill(gruen);
     noStroke();
     arc(width / 2, height / 2, width, height, radians(-70),     radians(180));
