@@ -5,11 +5,28 @@ var gelb;
 var rosa;
 var gruen;
 
+let alainX = 0;
+let alainY = 300;
+let alainXSpeed = 10;
+let alainYSpeed = 10;
+let alainFarbe = blau;
+let alainCounter = 0;
+let alainFarben = ['blau', 'rot', 'gelb', 'rosa', 'gruen'];
+
+
 var moves = 7; //anzahl unterschiedliche bewegungen 
 // es geht wieder los
 //Lina wenn das gsehsch...denn funktioniert :D
 //d Lina heds ned gseh
 //Lina can you see me?
+
+
+// SOPHIT VOREINSTELLUNG//
+let sox = 0; // Starting x position of the ball
+let soy = 50; // Starting y position of the ball
+let soySpeed = 5; // Speed of the ball in the y direction
+let soisBouncing = true; // Whether the ball is bouncing or not
+let sogroesse = 10; // Starting size of the ball
 
 var settings = {
     start: false,
@@ -118,12 +135,12 @@ function makeMove() {
 
 function move_1() {
     //hanna
-    background(0, 20);
-    fill(255, 255, 0);
+    background(0);
+    fill(gelb);
     noStroke();
     arc(width / 2, height / 2, width, height, 0, PI);
 
-    fill(255, 0, 0);
+    fill(rot);
 
     ellipse(settings.ballx, settings.bally, settings.radius);
     settings.ballx += settings.stepx;
@@ -163,7 +180,41 @@ function move_3() {
 
 //sophit
 function move_4() {
-   // background(155);
+    randomSeed(5);
+     // Draw intersecting rectangles in bold colors
+  noStroke(); // Disable stroke
+  fill('#D22D39'); // Set fill color to red
+  rect(0, 0, width/2, height/2);
+  fill('#42936C'); // Set fill color to green
+  rect(width/2, 0, width/2, height/2);
+  fill('#2363EB'); // Set fill color to blue
+  rect(0, height/2, width/2, height/2);
+  fill('#EBC141'); // Set fill color to yellow
+  rect(width/2, height/2, width/2, height/2);
+  
+  // Draw diagonal lines in a bold color
+  strokeWeight(15); // Set stroke weight to 3 pixels
+  stroke(255); // Set stroke color to white
+  line(0, 0, width/2, height/2); // Draw top-left to bottom-right line
+  line(width/2, height/2, width, height); // Draw bottom-right to top left line
+
+  // Draw the ball
+  fill('#E7909F');
+  noStroke();
+  ellipse(sox, soy, sogroesse, sogroesse);
+
+  // Move the ball
+  sox += 5;
+  soy += soySpeed;
+
+  // Increase the size of the ball
+  sogroesse += 1;
+
+  // Bounce the ball when it hits the floor
+  if (soySpeed > height - sogroesse/2 && soisBouncing) {
+    soySpeed = -soySpeed;
+    soisBouncing = false;
+  }
    
 }
 
@@ -207,8 +258,30 @@ function move_5() {
 
 //alain
 function move_6() {
+    background(0);
 
-
+    // Draw the triangle at the current position
+    fill(alainFarbe);
+    noStroke();
+    triangle(alainX, alainY, alainX+50, alainY, alainX, alainY+50);
+  
+    // Move the triangle diagonally
+    alainX += alainXSpeed;
+    alainY += alainYSpeed;
+  
+    // Bounce the triangle off the edges of the canvas
+    if (alainCounter <= 5) {
+      if (alainX < 0 || alainX > width - 50) {
+        alainFarbe = random(alainFarben);
+        alainXSpeed = -alainXSpeed;
+        alainCounter++;
+      }
+      if (y < 0 || alainY > height - 50) {
+        alainFarbe = random(alainFarben);
+        alainYSpeed = -alainYSpeed;
+        alainCounter++;
+      }
+    }
 }
 
 let LHx, LHy; // position of circle
