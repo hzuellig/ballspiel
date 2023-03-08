@@ -10,6 +10,8 @@ io.sockets.on("connection", newConnection);
 var clientId = 0; //Nummerierung der Clients
 var activeScreen = 0;//Keep Track which client is active
 
+//test 
+
 var ball={
     ballx:0,
     bally:0
