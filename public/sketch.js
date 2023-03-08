@@ -20,7 +20,9 @@ var settings = {
     radius: 50,
     stepx: 10,
     stepy: 5
-}
+};
+
+var mara_moved=false;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight)
@@ -82,7 +84,7 @@ function makeMove() {
     //console.log("move "+move)
     switch (move) {
         case (0):
-            move_5();
+            move_1();
             break;
         case (1):
             move_2()
@@ -107,12 +109,12 @@ function makeMove() {
 
 function move_1() {
     //hanna
-    //background(0, 20);
-    fill(gelb);
+    background(0, 20);
+    fill(255, 255, 0);
     noStroke();
     arc(width / 2, height / 2, width, height, 0, PI);
 
-    fill(rot);
+    fill(255, 0, 0);
 
     ellipse(settings.ballx, settings.bally, settings.radius);
     settings.ballx += settings.stepx;
@@ -120,9 +122,28 @@ function move_1() {
 
 //mara
 function move_2() {
+    background(0);
+    fill(gruen);
+    noStroke();
+    arc(width / 2, height / 2, width, height, radians(-70),     radians(180));
+    fill(rosa);
+    settings.stepy = sin(radians(70))*3
+    settings.stepx = cos(radians(70))*3
+  
+    if(mara_moved==false){
+      settings.bally=width / 2 -63
+      mara_moved=true
+    }
+    rect(settings.ballx, settings.bally, settings.radius);
+    if (settings.ballx < width / 2) {
+      settings.ballx += 10;
+    } else {
+      settings.ballx += settings.stepx;
+      settings.bally += settings.stepy*-1;
+    }
+  
+  }
 
-
-}
 
 //nicole
 function move_3() {
@@ -175,15 +196,7 @@ function move_5() {
 
 //alain
 function move_6() {
-    // background(black);
-    fill(green);
-    noStroke();
-    arc(width / 2, height / 2, width, height, 0, PI);
 
-    fill(255, 0, 0);
-
-    ellipse(settings.ballx, settings.bally, settings.radius);
-    settings.ballx += settings.stepx;
 
 }
 
