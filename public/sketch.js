@@ -5,6 +5,7 @@ var moves = 4; //anzahl unterschiedliche bewegungen
 //ok cool
 // bananita
 // nice
+// sind ihr au so lost? 0.0
 
 var settings = {
     start: false,
