@@ -31,19 +31,11 @@ function setup() {
     socket.on("canIstart", startDrawing);
     socket.on("settings", setSettings);
 
-<<<<<<< HEAD
-    //background(0);
-    blau = color('#2363EB');
-    rot = color('#D22D39');
-    gelb = color('#EBC141');
-    rosa = color('#E7909F');
-=======
     background(0);
     blau = color('#2363EB');
     rot = color('#D22D39');
     gelb = color('#EBC141');
     rosa = ('#E7909F');
->>>>>>> b4dafc3cc9e7a4fc492d07b3147945ef06f8518e
     gruen = color('#42936C');
 
     settings.bally = random(window.innerHeight);
