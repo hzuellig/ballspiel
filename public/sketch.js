@@ -196,6 +196,7 @@ function move_5() {
 
 //alain
 function move_6() {
+    //test
 
 
 }
