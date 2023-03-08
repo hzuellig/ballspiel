@@ -35,10 +35,17 @@ function setup() {
     blau = color('#2363EB');
     rot = color('#D22D39');
     gelb = color('#EBC141');
-    rosa = ('#E7909F');
+    rosa = color('#E7909F');
     gruen = color('#42936C');
 
     settings.bally = random(window.innerHeight);
+
+
+    //Lina
+    LHcanvasWidth = windowWidth;
+    LHcanvasHeight = windowHeight;
+    LHx = -LHsize; // start offscreen on the left side
+    LHy = LHcanvasHeight / 2; // centered vertically
 }
 
 function draw() {
@@ -87,10 +94,12 @@ function makeMove() {
             move_1();
             break;
         case (1):
+            console.log ('lets go Lina');
             move_2()
             break;
         case (2):
-            move_3()
+            move_2()
+           
             break;
         case (3):
             move_4()
@@ -123,7 +132,7 @@ function move_1() {
 
 
 //mara
-function move_2() {
+function move_7() {
     background(0,20);
     fill(gruen);
     noStroke();
@@ -202,7 +211,70 @@ function move_6() {
 
 }
 
+let LHx, LHy; // position of circle
+let LHsize = 50; // diameter of circle
+let LHspeed = 6; // speed of circle
+let LHdirection = 1; // direction of movement
+let LHcanvasWidth, LHcanvasHeight;
+let LHanimationComplete = false; // flag for animation completion
+
+
 //lina
-function move_7() {
+function move_2() {
+
+   
+
+    background(rosa); // yellow
+  randomSeed(5);
+  
+  
+    //rec gross
+  fill(blau);
+  rect(width/2, 0, width/2, height)
+
+  
+  // squares
+  fill(rot);
+  for (let i = 0; i < 20; i++) {
+    rect(random(LHcanvasWidth/2), random(LHcanvasHeight), 10, random(50,100));
+  }
+  
+    // squares klein
+  fill(gelb);
+  for (let i = 0; i < 50; i++) {
+    rect(random(LHcanvasWidth, LHcanvasWidth/2), random(LHcanvasHeight), 20, 20);
+  }
+  
+   //Rechteck
+ triangle(width/5*1, 0, width/5*4, 0, width/2, height/2);
+  
+
+  
+  // circle
+  fill(255); // white
+  stroke(0); // black
+  strokeWeight(0);
+  ellipse(LHx, LHy, LHsize, LHsize);
+  
+  // move circle
+  if (LHx > LHcanvasWidth + LHsize/2) {
+    if (!LHanimationComplete) {
+      // animation completed, set flag to true
+      LHanimationComplete = true;
+    } else {
+      // do nothing, animation has already completed
+      return;
+    }
+  } else {
+    // move in current direction
+    if (LHy <= LHsize/2 || LHy >= LHcanvasHeight - LHsize/2) {
+      // switch direction at top or bottom of canvas
+      LHdirection *= -1;
+    }
+    LHx += LHspeed;
+    LHy += LHdirection * LHspeed;
+    }
+
+    settings.ballx=LHx;
 
 }
