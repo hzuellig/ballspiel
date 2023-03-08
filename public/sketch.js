@@ -82,7 +82,7 @@ function makeMove() {
     //console.log("move "+move)
     switch (move) {
         case (0):
-            move_6();
+            move_7();
             break;
         case (1):
             move_2()
@@ -118,6 +118,8 @@ function move_1() {
     settings.ballx += settings.stepx;
 }
 
+
+
 //mara
 function move_2() {
 
@@ -142,15 +144,6 @@ function move_5() {
 
 //alain
 function move_6() {
-    background(black);
-    fill(green);
-    noStroke();
-    arc(width / 2, height / 2, width, height, 0, PI);
-
-    fill(255, 0, 0);
-
-    ellipse(settings.ballx, settings.bally, settings.radius);
-    settings.ballx += settings.stepx;
 
 }
 
