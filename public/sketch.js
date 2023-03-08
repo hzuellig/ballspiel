@@ -29,7 +29,7 @@ function setup() {
     socket.on("canIstart", startDrawing);
     socket.on("settings", setSettings);
 
-    background(0);
+    //background(0);
     blau = color('#2363EB');
     rot = color('#D22D39');
     gelb = color('#EBC141');
@@ -82,7 +82,7 @@ function makeMove() {
     //console.log("move "+move)
     switch (move) {
         case (0):
-            move_6();
+            move_5();
             break;
         case (1):
             move_2()
@@ -107,7 +107,7 @@ function makeMove() {
 
 function move_1() {
     //hanna
-    background(0, 20);
+    //background(0, 20);
     fill(gelb);
     noStroke();
     arc(width / 2, height / 2, width, height, 0, PI);
@@ -131,18 +131,51 @@ function move_3() {
 
 //sophit
 function move_4() {
-    background(155);
+   // background(155);
    
 }
 
 // moritz
 function move_5() {
+    background(0);
 
+    var stepSize = width / 10;
+
+    // draw the moving object
+    rectMode(CENTER);
+    fill(blau);
+    rect(frameCount*2 % width + stepSize, stepSize*2 + stepSize/2, stepSize, stepSize);
+    fill(rot);
+    rect(frameCount*2 % width + stepSize*2, stepSize*3 + stepSize/2, stepSize, stepSize);
+    fill(rosa);
+    rect(frameCount*2 % width + stepSize*3, stepSize*4 + stepSize/2, stepSize, stepSize);
+
+    fill(gruen);
+    rect(stepSize*2, stepSize*2 - stepSize/2, stepSize*4, stepSize);
+    rect(stepSize*7, stepSize*6 - stepSize/2, stepSize*4, stepSize);
+
+
+    // draw the static elements
+    stroke(255);
+    strokeWeight(4);
+    noFill();
+  
+    // draw horizontal lines
+    for (let i = 0; i <= 7; i++) {
+      const y = i * stepSize;
+      line(0, y, width, y);
+    }
+  
+    // draw vertical lines
+    for (let i = 0; i <= 10; i++) {
+      const x = i * stepSize;
+      line(x, 0, x, height);
+    }
 }
 
 //alain
 function move_6() {
-    background(black);
+    // background(black);
     fill(green);
     noStroke();
     arc(width / 2, height / 2, width, height, 0, PI);
