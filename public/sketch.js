@@ -5,7 +5,7 @@ var gelb;
 var rosa;
 var gruen;
 
-var moves = 4; //anzahl unterschiedliche bewegungen 
+var moves = 7; //anzahl unterschiedliche bewegungen 
 // es geht wieder los
 //Lina wenn das gsehsch...denn funktioniert :D
 //d Lina heds ned gseh
@@ -85,18 +85,28 @@ function makeMove() {
             move_1();
             break;
         case (1):
-            move_1()
+            move_2()
             break;
         case (2):
-            move_1()
+            move_3()
             break;
         case (3):
-            move_1()
+            move_4()
+            break;
+        case (4):
+            move_5()
+            break;
+        case (5):
+            move_6()
+            break;
+        case (6):
+            move_7()
             break;
     }
 }
 
 function move_1() {
+    //hanna
     background(0, 20);
     fill(255, 255, 0);
     noStroke();
