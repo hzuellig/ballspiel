@@ -142,7 +142,7 @@ function move_5() {
 
 //alain
 function move_6() {
-    background(black);
+    background(0);
     fill(green);
     noStroke();
     arc(width / 2, height / 2, width, height, 0, PI);
