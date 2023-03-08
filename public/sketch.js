@@ -30,11 +30,11 @@ function setup() {
     socket.on("settings", setSettings);
 
     background(0);
-    blau = color(#2363EB);
-    rot = color(#D22D39);
-    gelb = color(#EBC141);
-    rosa = (#E7909F);
-    gruen = color(#42936C);
+    blau = color('#2363EB');
+    rot = color('#D22D39');
+    gelb = color('#EBC141');
+    rosa = color('#E7909F');
+    gruen = color('#42936C');
 
     settings.bally = random(window.innerHeight);
 }
