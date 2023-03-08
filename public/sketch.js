@@ -124,12 +124,12 @@ function makeMove() {
 
 function move_1() {
     //hanna
-    background(0, 20);
-    fill(255, 255, 0);
+    background(0);
+    fill(gelb);
     noStroke();
     arc(width / 2, height / 2, width, height, 0, PI);
 
-    fill(255, 0, 0);
+    fill(rot);
 
     ellipse(settings.ballx, settings.bally, settings.radius);
     settings.ballx += settings.stepx;
