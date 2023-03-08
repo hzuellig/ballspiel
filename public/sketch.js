@@ -14,7 +14,7 @@ let alainCounter = 0;
 let alainFarben = ['blau', 'rot', 'gelb', 'rosa', 'gruen'];
 
 
-var moves = 7; //anzahl unterschiedliche bewegungen 
+var moves = 3; //anzahl unterschiedliche bewegungen 
 // es geht wieder los
 //Lina wenn das gsehsch...denn funktioniert :D
 //d Lina heds ned gseh
@@ -115,14 +115,14 @@ function makeMove() {
             move_2()
             break;
         case (2):
-            move_3()
+            move_5()
            
             break;
         case (3):
             move_4()
             break;
         case (4):
-            move_5()
+            move_7()
             break;
         case (5):
             move_6()
