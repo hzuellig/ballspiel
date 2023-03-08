@@ -1,19 +1,20 @@
 var socket;
 
 var moves = 4; //anzahl unterschiedliche bewegungen 
-//Hello my name is YodoxD, nice to meet you! <3
-//ok cool
-
+// es geht wieder los
+//Lina wenn das gsehsch...denn funktioniert :D
+//d Lina heds ned gseh
+//Lina can you see me?
 
 var settings = {
     start: false,
     finished: false,
-    queue:0,
-    ballx:-100,
-    bally:window.innerHeight/2,
-    radius:50,
-    stepx:10,
-    stepy:5
+    queue: 0,
+    ballx: -100,
+    bally: window.innerHeight / 2,
+    radius: 50,
+    stepx: 10,
+    stepy: 5
 }
 
 function setup() {
