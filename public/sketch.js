@@ -115,7 +115,7 @@ function makeMove() {
             move_2()
             break;
         case (2):
-            move_2()
+            move_3()
            
             break;
         case (3):
