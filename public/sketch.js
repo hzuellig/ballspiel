@@ -30,8 +30,16 @@ function setup() {
     socket.on("settings", setSettings);
 
     background(0);
+<<<<<<< HEAD
     blau = color(#2363EB);
     rot = color(#D22D39); gelb = color(#EBC141); rosa = (#E7909F); gruen = color(#42936C);
+=======
+    blau = color('#2363EB');
+    rot = color('#D22D39');
+    gelb = color('#EBC141');
+    rosa = color('#E7909F');
+    gruen = color('#42936C');
+>>>>>>> 98f2a5cc9f5854c123484ee41bb763552406911d
 
     settings.bally = random(window.innerHeight);
             }
@@ -74,6 +82,7 @@ function setup() {
             }
 
 
+<<<<<<< HEAD
             function makeMove() {
                 let move = settings.queue % moves;
                 //console.log("move "+move)
@@ -110,6 +119,44 @@ function setup() {
                 arc(width / 2, height / 2, width, height, 0, PI);
 
                 fill(255, 0, 0);
+=======
+function makeMove() {
+    let move = settings.queue % moves;
+    //console.log("move "+move)
+    switch (move) {
+        case (0):
+            move_6();
+            break;
+        case (1):
+            move_2()
+            break;
+        case (2):
+            move_3()
+            break;
+        case (3):
+            move_4()
+            break;
+        case (4):
+            move_5()
+            break;
+        case (5):
+            move_6()
+            break;
+        case (6):
+            move_7()
+            break;
+    }
+}
+
+function move_1() {
+    //hanna
+    background(0, 20);
+    fill(gelb);
+    noStroke();
+    arc(width / 2, height / 2, width, height, 0, PI);
+
+    fill(rot);
+>>>>>>> 98f2a5cc9f5854c123484ee41bb763552406911d
 
                 ellipse(settings.ballx, settings.bally, settings.radius);
                 settings.ballx += settings.stepx;
@@ -135,10 +182,24 @@ function setup() {
             // moritz
             function move_5() {
 
+<<<<<<< HEAD
             }
 
             //alain
             function move_6() {
+=======
+//alain
+function move_6() {
+    background(black);
+    fill(green);
+    noStroke();
+    arc(width / 2, height / 2, width, height, 0, PI);
+
+    fill(255, 0, 0);
+
+    ellipse(settings.ballx, settings.bally, settings.radius);
+    settings.ballx += settings.stepx;
+>>>>>>> 98f2a5cc9f5854c123484ee41bb763552406911d
 
 
             }
