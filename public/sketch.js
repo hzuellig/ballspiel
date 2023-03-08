@@ -5,6 +5,7 @@ var moves = 4; //anzahl unterschiedliche bewegungen
 //Lina wenn das gsehsch...denn funktioniert :D
 //d Lina heds ned gseh
 //Lina can you see me?
+//No
 
 var settings = {
     start: false,
