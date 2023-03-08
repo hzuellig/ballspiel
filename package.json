@@ -1,0 +1,16 @@
+{
+  "name": "ballspiel",
+  "version": "1.0.0",
+  "description": "Skeleton für eine Art Ruby Goldber",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Hanna Zuellig",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  }
+}
