@@ -82,7 +82,7 @@ function makeMove() {
     //console.log("move "+move)
     switch (move) {
         case (0):
-            move_6();
+            move_1();
             break;
         case (1):
             move_2()
@@ -142,7 +142,7 @@ function move_5() {
 
 //alain
 function move_6() {
-    background(black);
+    background(0);
     fill(green);
     noStroke();
     arc(width / 2, height / 2, width, height, 0, PI);
